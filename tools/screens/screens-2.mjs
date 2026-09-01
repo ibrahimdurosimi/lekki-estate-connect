@@ -1,5 +1,5 @@
 // Household management, community features, analytics, notifications
-import { bell, bottomNav, sheet, scrim, sosFab, sosSheet, kpi, chart, rangeBar, subHeader, backLink } from "./lib.mjs";
+import { bell, bottomNav, sheet, scrim, sosFab, sosSheet, kpi, chart, rangeBar, subHeader, backLink, cfgAttr } from "./lib.mjs";
 
 /* ------------------------------------------------- 7. sub-account manager */
 export const subAccounts = {
@@ -836,7 +836,7 @@ export const analytics = {
     <div class="section">
       <div class="card chart-card">
         <div class="chart-head"><h3 style="font-size:15px">Peak visiting times</h3><span class="tiny muted">day × hour</span></div>
-        <div data-chart="heat" data-cfg='${JSON.stringify({
+        <div data-chart="heat" data-cfg='${cfgAttr({
           rows: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
           cols: ["6", "8", "10", "12", "14", "16", "18", "20", "22"],
           values: [
