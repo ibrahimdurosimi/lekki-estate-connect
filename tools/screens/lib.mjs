@@ -158,3 +158,83 @@ export function rangeBar(active = "Month") {
     ${["Today", "Week", "Month", "Quarter", "Year", "Custom"].map(r => `<button type="button" aria-pressed="${r === active}">${r}</button>`).join("")}
   </div>`;
 }
+
+/* ------------------------------------------------------------------ */
+/* Batch 2 — governance / operations / security shared fragments      */
+/* ------------------------------------------------------------------ */
+
+/* Admin-side header: role tag, title, persistent bell. */
+export function adminHeader({ role, title, sub = "", back = "", unread = 6, small = true, extra = "" }) {
+  return `<header class="hero${small ? " hero-sm" : ""}">
+    <div class="topbar">
+      ${back ? backLink(back) : `<div class="avatar" style="background:var(--gold);color:var(--deep)">LH</div>`}
+      <div class="grow"></div>
+      ${extra}
+      ${bell({ count: unread })}
+    </div>
+    <div style="margin-top:16px">
+      <span class="role-tag">${role}</span>
+      <h1 style="font-size:25px;margin-top:10px">${title}</h1>
+      ${sub ? `<p class="muted" style="margin-top:6px;font-size:13.5px">${sub}</p>` : ""}
+    </div>
+  </header>`;
+}
+
+const ICO = {
+  home: `<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/>`,
+  chart: `<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>`,
+  people: `<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5"/><path d="M17 8.5a3 3 0 0 1 0 5"/>`,
+  shield: `<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>`,
+  bell: `<path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>`,
+  grid: `<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>`,
+  key: `<circle cx="8" cy="14" r="4"/><path d="M11 11l9-9M17 5l2 2M14 8l2 2"/>`,
+};
+
+/* Generic bottom nav from [label, href, iconKey] triples. */
+export function navBar(items, active) {
+  return `<nav class="bottomnav" aria-label="Primary">
+    ${items.map(([label, href, ico]) => `<a class="navitem" href="${href}"${label === active ? ' aria-current="page"' : ""}>
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICO[ico]}</svg></span>${label}</a>`).join("\n    ")}
+  </nav>`;
+}
+
+export const NAV_EM = [
+  ["Home", "em-dashboard.html", "home"],
+  ["Staff", "estate-staff.html", "people"],
+  ["Insights", "em-analytics.html", "chart"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_SM = [
+  ["Home", "sm-dashboard.html", "shield"],
+  ["Insights", "sm-analytics.html", "chart"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_EXEC = [
+  ["Home", "exec-dashboard.html", "home"],
+  ["Insights", "exec-analytics.html", "chart"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_SYS = [
+  ["Accounts", "sysadmin-dashboard.html", "grid"],
+  ["Health", "sysadmin-health.html", "chart"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_GUARD = [
+  ["Kiosk", "guard-kiosk.html", "key"],
+  ["SOS panel", "guard-sos.html", "shield"],
+];
+
+/* Feed item used by cross-gate live activity. */
+export function feedItem({ gate = "1", title, sub, time, pill = "" }) {
+  return `<div class="fitem">
+      <span class="fgate${gate === "2" ? " g2" : ""}">GATE<br>${gate}</span>
+      <span class="fbody"><span class="ftitle">${title}</span><span class="fsub">${sub}</span></span>
+      ${pill ? `<span class="${pill.cls}">${pill.text}</span>` : ""}
+      <span class="ftime">${time}</span>
+    </div>`;
+}
+
+/* Inline (header) SOS button — used where a floating FAB would not fit. */
+export function sosInline(label = "SOS") {
+  return `<button class="sos-inline" data-sos aria-label="Personal emergency SOS — press and hold five seconds">🚨 ${label}</button>`;
+}
