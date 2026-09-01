@@ -27,6 +27,8 @@ const SCREENS = [
   { group: "Estate operations", items: [S3.emDashboard, S3.estateStaff, S3.emAnalytics] },
   { group: "Security", items: [S4.smDashboard, S4.smAnalytics, S4.guardKiosk, S4.guardSos] },
   { group: "Governance & system", items: [S5.execDashboard, S5.execAnalytics, S5.sysadminDashboard, S5.sysadminHealth] },
+  { group: "Madrasa", items: [S6.madrasaDashboard, S6.madrasaAnalytics, S7.teacherDashboard, S7.minderDashboard, S7.guardianDashboard] },
+
 ];
 
 const BLURB = {
