@@ -841,7 +841,7 @@ small{font-size:12px}
   /* line chart: { labels:[], series:[{name,color,values:[]}], compare:bool } */
   LH.line = function (el, cfg) {
     el.innerHTML = '';
-    var W = 320, H = 148, P = { l: 4, r: 4, t: 10, b: 20 };
+    var W = 320, H = 148, P = { l: 12, r: 12, t: 10, b: 20 };
     var s = svg(W, H);
     s.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     var series = cfg.series.filter(function (x) { return cfg.compare || !x.isCompare; });
