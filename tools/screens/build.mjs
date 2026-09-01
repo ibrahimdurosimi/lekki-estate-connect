@@ -6,6 +6,9 @@ import { fileURLToPath } from "node:url";
 import { page } from "./lib.mjs";
 import * as S1 from "./screens-1.mjs";
 import * as S2 from "./screens-2.mjs";
+import * as S3 from "./screens-3.mjs";
+import * as S4 from "./screens-4.mjs";
+import * as S5 from "./screens-5.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const OUT = join(here, "../../public/screens");
@@ -18,6 +21,9 @@ const SCREENS = [
   { group: "Household management", items: [S2.subAccounts, S2.staffOnboarding, S2.staffManagement] },
   { group: "Estate services", items: [S2.facilities, S2.tickets, S2.notices, S2.polls, S2.marketplace] },
   { group: "Account & insights", items: [S2.settings, S2.analytics, S2.notifications] },
+  { group: "Estate operations", items: [S3.emDashboard, S3.estateStaff, S3.emAnalytics] },
+  { group: "Security", items: [S4.smDashboard, S4.smAnalytics, S4.guardKiosk, S4.guardSos] },
+  { group: "Governance & system", items: [S5.execDashboard, S5.execAnalytics, S5.sysadminDashboard, S5.sysadminHealth] },
 ];
 
 const BLURB = {
@@ -38,6 +44,17 @@ const BLURB = {
   "settings.html": "Profile, next-of-kin, PIN change and notification preferences.",
   "analytics.html": "Household analytics using the shared chart vocabulary.",
   "notifications.html": "Persistent notification history, filterable.",
+  "em-dashboard.html": "Approvals with full next-of-kin, dues, audit log, accounts, notices, bookings, tickets.",
+  "estate-staff.html": "Estate Staff records and recurring gate passes — this role never logs in.",
+  "em-analytics.html": "Estate-wide analytics: traffic, passes, dues, approvals, growth, overstays, tickets, facilities.",
+  "sm-dashboard.html": "Guard roster, cross-gate live feed, full escalations, guard accounts, personal SOS.",
+  "sm-analytics.html": "ACCESS/DENIED/EXPIRED health indicator, gate traffic, peak hours, response times, scans.",
+  "guard-kiosk.html": "PIN-only kiosk with full-screen verdicts and operational guidance.",
+  "guard-sos.html": "Active alert banner, acknowledge action and the full day's alert log.",
+  "exec-dashboard.html": "Estate Manager view plus EM account control, System Admin visibility and override log.",
+  "exec-analytics.html": "Estate-health KPIs, manager accountability, year-over-year finance, plus all role analytics.",
+  "sysadmin-dashboard.html": "Accounts across every role, override tools and the permanent override log.",
+  "sysadmin-health.html": "Plain, data-dense technical view: active users, login patterns, overrides, cross-role activity.",
 };
 
 mkdirSync(OUT, { recursive: true });
@@ -54,7 +71,7 @@ for (const g of SCREENS) {
 const gallery = page(
   {
     title: "Screen index",
-    desc: "Index of the Lighthouse Lekki Estate resident-facing static screens.",
+    desc: "Index of the Lighthouse Lekki Estate Community Portal static screens.",
     body: `
   <header class="hero">
     <div class="topbar">
@@ -62,7 +79,7 @@ const gallery = page(
       <div class="grow"><div style="font-weight:700;font-size:14.5px;color:#fff">Lighthouse Lekki Estate</div><div class="tiny muted">Community Portal — screen index</div></div>
     </div>
     <div style="margin-top:24px">
-      <span class="pill pill-gold">Batch 1 of 3 · public &amp; resident</span>
+      <span class="pill pill-gold">Batch 2 of 3 · resident, operations, security &amp; governance</span>
       <h1 style="margin-top:12px">${count} static screens</h1>
       <p class="muted" style="margin-top:10px;font-size:13.5px">Self-contained HTML with embedded CSS and vanilla JS. No framework, no routing, no backend calls — a visual and interaction reference.</p>
     </div>

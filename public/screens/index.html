@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Screen index · Lighthouse Lekki Estate</title>
-<meta name="description" content="Index of the Lighthouse Lekki Estate resident-facing static screens.">
+<meta name="description" content="Index of the Lighthouse Lekki Estate Community Portal static screens.">
 <meta name="theme-color" content="#123528">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -521,6 +521,110 @@ small{font-size:12px}
 .notif .n-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);flex:none;margin-top:6px}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
 
+/* ==========================================================================
+   Batch 2 — governance, operations & security additions
+   Same tokens, same component language. No new colours introduced.
+   ========================================================================== */
+
+/* ---------- Role badge in admin headers --------------------------------- */
+.role-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--gold);background:rgba(232,197,71,.14);
+  border:1px solid rgba(232,197,71,.34);
+  border-radius:var(--r-pill);padding:5px 10px;
+}
+
+/* ---------- Live activity feed ------------------------------------------ */
+.livedot{
+  width:8px;height:8px;border-radius:50%;background:var(--ok);
+  display:inline-block;flex:none;animation:lh-pulse 1.8s var(--ease) infinite;
+}
+@keyframes lh-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.feed{position:relative}
+.feed .fitem{display:flex;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.feed .fitem:last-child{border-bottom:0}
+.feed .fgate{
+  flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  font-size:10.5px;font-weight:800;line-height:1.1;text-align:center;
+  background:var(--mint-100);color:var(--deep);
+}
+.feed .fgate.g2{background:var(--gold-100);color:#7A5F06}
+.feed .fbody{min-width:0;flex:1}
+.feed .ftitle{display:block;font-weight:700;font-size:13.5px;color:var(--ink)}
+.feed .fsub{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.feed .ftime{font-size:11px;color:var(--muted);white-space:nowrap;align-self:flex-start;padding-top:2px}
+
+/* ---------- Guard kiosk verdict ----------------------------------------- */
+.kiosk{min-height:100vh;display:flex;flex-direction:column;background:var(--deep)}
+.kiosk-top{
+  display:flex;align-items:center;gap:10px;
+  padding:calc(12px + var(--safe-t)) 16px 12px;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.kiosk-top .k-gate{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15px}
+.kiosk-body{flex:1;padding:18px 16px calc(18px + var(--safe-b));display:flex;flex-direction:column}
+.sos-inline{
+  min-height:var(--tap);padding:0 14px;border-radius:var(--r-pill);
+  background:var(--danger);color:#fff;border:0;font-weight:800;font-size:12.5px;
+  letter-spacing:.06em;display:inline-flex;align-items:center;gap:7px;flex:none;
+}
+.verdict{
+  position:fixed;inset:0;z-index:60;display:none;
+  flex-direction:column;justify-content:center;align-items:center;
+  padding:calc(24px + var(--safe-t)) 22px calc(24px + var(--safe-b));
+  text-align:center;color:#fff;
+}
+.verdict.open{display:flex}
+.verdict.v-access{background:linear-gradient(165deg,#2E9E63 0%,#1C7247 100%)}
+.verdict.v-denied{background:linear-gradient(165deg,#C6413B 0%,#8E2A26 100%)}
+.verdict.v-expired{background:linear-gradient(165deg,#A63A35 0%,#5E1F1C 100%)}
+.verdict .v-mark{
+  width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.5);font-size:52px;
+}
+.verdict h2{color:#fff;font-size:44px;letter-spacing:-.03em;margin-top:20px}
+.verdict .v-sub{margin-top:8px;font-size:14px;color:rgba(255,255,255,.86);font-weight:600}
+.verdict .v-guide{
+  margin-top:22px;max-width:380px;background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.22);border-radius:var(--r-md);
+  padding:14px 16px;font-size:13.5px;line-height:1.5;color:#fff;text-align:left;
+}
+.verdict .v-guide b{display:block;margin-bottom:5px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.verdict .v-meta{margin-top:16px;font-size:12px;color:rgba(255,255,255,.72)}
+.verdict .btn{margin-top:24px;background:#fff;color:var(--ink);min-width:220px}
+
+/* ---------- Incoming SOS alert banner ----------------------------------- */
+.alert-banner{
+  border-radius:var(--r-lg);padding:16px;color:#fff;
+  background:linear-gradient(160deg,#C6413B 0%,#8E2A26 100%);
+  box-shadow:var(--shadow-md);position:relative;overflow:hidden;
+}
+.alert-banner::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  border:2px solid rgba(255,255,255,.5);animation:lh-halo 1.6s var(--ease) infinite;
+}
+@keyframes lh-halo{0%{opacity:.9}50%{opacity:.15}100%{opacity:.9}}
+.alert-banner h3{color:#fff;font-size:19px}
+.alert-banner .ab-row{display:flex;align-items:center;gap:8px;font-size:12.5px;color:rgba(255,255,255,.9);margin-top:6px}
+.alert-banner .btn{margin-top:14px}
+
+/* ---------- Roster slot ------------------------------------------------- */
+.roster{display:grid;grid-template-columns:1fr;gap:10px}
+.rslot{
+  border:1px dashed var(--line);border-radius:var(--r-md);padding:12px 14px;
+  background:var(--surface);display:flex;align-items:center;gap:12px;min-height:var(--tap);
+}
+.rslot.filled{border-style:solid;border-color:var(--mint);background:var(--mint-050)}
+.rslot .rs-time{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted);width:78px;flex:none}
+.rslot.filled .rs-time{color:var(--deep)}
+
+/* ---------- Dense/technical table (System Admin) ------------------------ */
+.table.dense{font-size:11.5px;font-variant-numeric:tabular-nums}
+.table.dense th,.table.dense td{padding:7px 9px}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px}
+.card.plain{border-radius:var(--r-sm);box-shadow:none;border:1px solid var(--line)}
+
 </style>
 </head>
 <body>
@@ -532,8 +636,8 @@ small{font-size:12px}
       <div class="grow"><div style="font-weight:700;font-size:14.5px;color:#fff">Lighthouse Lekki Estate</div><div class="tiny muted">Community Portal — screen index</div></div>
     </div>
     <div style="margin-top:24px">
-      <span class="pill pill-gold">Batch 1 of 3 · public &amp; resident</span>
-      <h1 style="margin-top:12px">17 static screens</h1>
+      <span class="pill pill-gold">Batch 2 of 3 · resident, operations, security &amp; governance</span>
+      <h1 style="margin-top:12px">28 static screens</h1>
       <p class="muted" style="margin-top:10px;font-size:13.5px">Self-contained HTML with embedded CSS and vanilla JS. No framework, no routing, no backend calls — a visual and interaction reference.</p>
     </div>
   </header>
@@ -562,6 +666,21 @@ small{font-size:12px}
       <div class="section-head"><h2>Account & insights</h2><span class="pill pill-mute">3</span></div>
       <div class="card flush">
         <a class="row" href="settings.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Settings & profile</span><span class="row-sub">Profile, next-of-kin, PIN change and notification preferences.</span></span><span class="chev">›</span></a><a class="row" href="analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">My insights</span><span class="row-sub">Household analytics using the shared chart vocabulary.</span></span><span class="chev">›</span></a><a class="row" href="notifications.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Notifications</span><span class="row-sub">Persistent notification history, filterable.</span></span><span class="chev">›</span></a>
+      </div>
+    </div><div class="section" style="margin-top:0;margin-bottom:24px">
+      <div class="section-head"><h2>Estate operations</h2><span class="pill pill-mute">3</span></div>
+      <div class="card flush">
+        <a class="row" href="em-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Manager dashboard</span><span class="row-sub">Approvals with full next-of-kin, dues, audit log, accounts, notices, bookings, tickets.</span></span><span class="chev">›</span></a><a class="row" href="estate-staff.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Staff records</span><span class="row-sub">Estate Staff records and recurring gate passes — this role never logs in.</span></span><span class="chev">›</span></a><a class="row" href="em-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate analytics</span><span class="row-sub">Estate-wide analytics: traffic, passes, dues, approvals, growth, overstays, tickets, facilities.</span></span><span class="chev">›</span></a>
+      </div>
+    </div><div class="section" style="margin-top:0;margin-bottom:24px">
+      <div class="section-head"><h2>Security</h2><span class="pill pill-mute">4</span></div>
+      <div class="card flush">
+        <a class="row" href="sm-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security Manager dashboard</span><span class="row-sub">Guard roster, cross-gate live feed, full escalations, guard accounts, personal SOS.</span></span><span class="chev">›</span></a><a class="row" href="sm-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security analytics</span><span class="row-sub">ACCESS/DENIED/EXPIRED health indicator, gate traffic, peak hours, response times, scans.</span></span><span class="chev">›</span></a><a class="row" href="guard-kiosk.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard kiosk</span><span class="row-sub">PIN-only kiosk with full-screen verdicts and operational guidance.</span></span><span class="chev">›</span></a><a class="row" href="guard-sos.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard SOS panel</span><span class="row-sub">Active alert banner, acknowledge action and the full day's alert log.</span></span><span class="chev">›</span></a>
+      </div>
+    </div><div class="section" style="margin-top:0;margin-bottom:24px">
+      <div class="section-head"><h2>Governance & system</h2><span class="pill pill-mute">4</span></div>
+      <div class="card flush">
+        <a class="row" href="exec-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">President / VP dashboard</span><span class="row-sub">Estate Manager view plus EM account control, System Admin visibility and override log.</span></span><span class="chev">›</span></a><a class="row" href="exec-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate health — President / VP</span><span class="row-sub">Estate-health KPIs, manager accountability, year-over-year finance, plus all role analytics.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System Admin dashboard</span><span class="row-sub">Accounts across every role, override tools and the permanent override log.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-health.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System health</span><span class="row-sub">Plain, data-dense technical view: active users, login patterns, overrides, cross-role activity.</span></span><span class="chev">›</span></a>
       </div>
     </div>
     <div class="note" style="margin-bottom:30px">Design system: mint <b>#3FAE7A</b> / deep <b>#123528</b> with a lemon-gold <b>#E8C547</b> accent, Bricolage Grotesque for display and Plus Jakarta Sans for body. Reused patterns: hero-then-rounded-sheet, .card / .row / .pill / .tile, bottom-sheet modals, the on-screen PIN keypad, and the KPI / line / bar / donut / heatmap / table chart vocabulary.</div>
