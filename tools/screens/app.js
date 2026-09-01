@@ -215,7 +215,7 @@
   /* line chart: { labels:[], series:[{name,color,values:[]}], compare:bool } */
   LH.line = function (el, cfg) {
     el.innerHTML = '';
-    var W = 320, H = 148, P = { l: 4, r: 4, t: 10, b: 20 };
+    var W = 320, H = 148, P = { l: 12, r: 12, t: 10, b: 20 };
     var s = svg(W, H);
     s.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     var series = cfg.series.filter(function (x) { return cfg.compare || !x.isCompare; });
@@ -410,11 +410,13 @@
         strength: el.hasAttribute('data-strength'),
         mask: el.hasAttribute('data-mask'),
         onComplete: function () {
-          var cta = document.querySelector(el.getAttribute('data-cta') || '');
+          var sel = el.getAttribute('data-cta');
+          var cta = sel ? document.querySelector(sel) : null;
           if (cta) cta.removeAttribute('disabled');
         },
         onChange: function (v) {
-          var cta = document.querySelector(el.getAttribute('data-cta') || '');
+          var sel = el.getAttribute('data-cta');
+          var cta = sel ? document.querySelector(sel) : null;
           if (cta && v.length < parseInt(el.getAttribute('data-length') || '6', 10)) cta.setAttribute('disabled', '');
         }
       });

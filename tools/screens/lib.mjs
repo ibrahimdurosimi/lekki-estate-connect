@@ -136,6 +136,10 @@ export function kpi(label, value, unit = "", delta = null, dir = "up") {
   </div>`;
 }
 
+export function cfgAttr(o) {
+  return JSON.stringify(o).replace(/'/g, "&#39;").replace(/</g, "\\u003c");
+}
+
 /* Chart card wrapper. Kind: line|bar|donut|heat */
 export function chart({ title, note = "", kind, cfg, compare = false, id = "" }) {
   return `<div class="card chart-card">
@@ -143,7 +147,7 @@ export function chart({ title, note = "", kind, cfg, compare = false, id = "" })
       <h3 style="font-size:15px">${title}</h3>
       ${compare ? `<label class="compare-toggle"><button class="switch" role="switch" aria-checked="false" data-compare-toggle="#${id}" aria-label="Compare to previous period"></button>vs. prev</label>` : ""}
     </div>
-    <div data-chart="${kind}"${id ? ` id="${id}"` : ""} data-cfg='${JSON.stringify(cfg)}'></div>
+    <div data-chart="${kind}"${id ? ` id="${id}"` : ""} data-cfg='${cfgAttr(cfg)}'></div>
     ${note ? `<p class="chart-note">${note}</p>` : ""}
   </div>`;
 }
