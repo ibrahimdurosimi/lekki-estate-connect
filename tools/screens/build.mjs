@@ -9,6 +9,9 @@ import * as S2 from "./screens-2.mjs";
 import * as S3 from "./screens-3.mjs";
 import * as S4 from "./screens-4.mjs";
 import * as S5 from "./screens-5.mjs";
+import * as S6 from "./screens-6.mjs";
+import * as S7 from "./screens-7.mjs";
+
 
 const here = dirname(fileURLToPath(import.meta.url));
 const OUT = join(here, "../../public/screens");
