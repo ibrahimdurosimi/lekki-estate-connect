@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Screen index · Lighthouse Lekki Estate</title>
-<meta name="description" content="Index of the Lighthouse Lekki Estate Community Portal static screens.">
+<title>Madrasa analytics · Lighthouse Lekki Estate</title>
+<meta name="description" content="Enrolment trend, resident vs. external mix, attendance by class, absence patterns, staff activity, enrolment turnaround, class sizes and pickup-time heatmap.">
 <meta name="theme-color" content="#123528">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -630,66 +630,171 @@ small{font-size:12px}
 <body>
 <div class="app">
 
-  <header class="hero">
+  <header class="hero hero-sm">
     <div class="topbar">
-      <div class="avatar" style="background:var(--gold);color:var(--deep)">LH</div>
-      <div class="grow"><div style="font-weight:700;font-size:14.5px;color:#fff">Lighthouse Lekki Estate</div><div class="tiny muted">Community Portal — screen index</div></div>
+      <a class="back" href="madrasa-dashboard.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Back</a>
+      <div class="grow"></div>
+      
+      <a class="iconbtn" href="notifications.html" aria-label="Notifications, 5 unread">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="badge-dot">5</span>
+      </a>
     </div>
-    <div style="margin-top:24px">
-      <span class="pill pill-gold">Complete · resident, operations, security, governance &amp; Madrasa</span>
-      <h1 style="margin-top:12px">33 static screens</h1>
-      <p class="muted" style="margin-top:10px;font-size:13.5px">Self-contained HTML with embedded CSS and vanilla JS. No framework, no routing, no backend calls — a visual and interaction reference.</p>
+    <div style="margin-top:16px">
+      <span class="role-tag">Madrasa Admin</span>
+      <h1 style="font-size:25px;margin-top:10px">Madrasa analytics</h1>
+      <p class="muted" style="margin-top:6px;font-size:13.5px">Scope: Madrasa data only</p>
     </div>
   </header>
   <main class="sheet-body">
-    <div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Public</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="welcome.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Welcome</span><span class="row-sub">Resident-only landing with the daily rotating hadith.</span></span><span class="chev">›</span></a><a class="row" href="login-resident.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident sign in</span><span class="row-sub">House + unit + 6-character PIN on the custom keypad.</span></span><span class="chev">›</span></a><a class="row" href="login-admin.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Staff sign in</span><span class="row-sub">Email, password and MFA for estate and Madrasa staff.</span></span><span class="chev">›</span></a><a class="row" href="register.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident registration</span><span class="row-sub">Household registration ending in a pending-review confirmation.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Resident dashboards</h2><span class="pill pill-mute">2</span></div>
-      <div class="card flush">
-        <a class="row" href="dashboard-primary.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident dashboard</span><span class="row-sub">Full household view: passes, gate feed, dues, staff, Madrasa, SOS.</span></span><span class="chev">›</span></a><a class="row" href="dashboard-sub.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Sub-account dashboard</span><span class="row-sub">Reduced sub-account shell — only passes they issued.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Household management</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="sub-accounts.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Sub-accounts</span><span class="row-sub">List, add (PIN shown once) and deactivate sub-accounts.</span></span><span class="chev">›</span></a><a class="row" href="staff-onboarding.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Household staff onboarding</span><span class="row-sub">Invite code → live-in/visiting → KYC → gate PIN.</span></span><span class="chev">›</span></a><a class="row" href="staff-management.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Household staff</span><span class="row-sub">Primary's view of household staff and invite codes.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Estate services</h2><span class="pill pill-mute">5</span></div>
-      <div class="card flush">
-        <a class="row" href="facilities.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Facility booking</span><span class="row-sub">Facility carousel, date and slot picker, my bookings.</span></span><span class="chev">›</span></a><a class="row" href="tickets.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Fix-it tickets</span><span class="row-sub">Category tiles, urgency form and 4-stage status stepper.</span></span><span class="chev">›</span></a><a class="row" href="notices.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Notice board</span><span class="row-sub">Notice board filtered by Emergency / Info / Maintenance.</span></span><span class="chev">›</span></a><a class="row" href="polls.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Townhall polls</span><span class="row-sub">Townhall polls with animated result bars and closed history.</span></span><span class="chev">›</span></a><a class="row" href="marketplace.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Marketplace</span><span class="row-sub">Category grid, free vs. paid, message-seller sheet.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Account & insights</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="settings.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Settings & profile</span><span class="row-sub">Profile, next-of-kin, PIN change and notification preferences.</span></span><span class="chev">›</span></a><a class="row" href="analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">My insights</span><span class="row-sub">Household analytics using the shared chart vocabulary.</span></span><span class="chev">›</span></a><a class="row" href="notifications.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Notifications</span><span class="row-sub">Persistent notification history, filterable.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Estate operations</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="em-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Manager dashboard</span><span class="row-sub">Approvals with full next-of-kin, dues, audit log, accounts, notices, bookings, tickets.</span></span><span class="chev">›</span></a><a class="row" href="estate-staff.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Staff records</span><span class="row-sub">Estate Staff records and recurring gate passes — this role never logs in.</span></span><span class="chev">›</span></a><a class="row" href="em-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate analytics</span><span class="row-sub">Estate-wide analytics: traffic, passes, dues, approvals, growth, overstays, tickets, facilities.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Security</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="sm-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security Manager dashboard</span><span class="row-sub">Guard roster, cross-gate live feed, full escalations, guard accounts, personal SOS.</span></span><span class="chev">›</span></a><a class="row" href="sm-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security analytics</span><span class="row-sub">ACCESS/DENIED/EXPIRED health indicator, gate traffic, peak hours, response times, scans.</span></span><span class="chev">›</span></a><a class="row" href="guard-kiosk.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard kiosk</span><span class="row-sub">PIN-only kiosk with full-screen verdicts and operational guidance.</span></span><span class="chev">›</span></a><a class="row" href="guard-sos.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard SOS panel</span><span class="row-sub">Active alert banner, acknowledge action and the full day's alert log.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Governance & system</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="exec-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">President / VP dashboard</span><span class="row-sub">Estate Manager view plus EM account control, System Admin visibility and override log.</span></span><span class="chev">›</span></a><a class="row" href="exec-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate health — President / VP</span><span class="row-sub">Estate-health KPIs, manager accountability, year-over-year finance, plus all role analytics.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System Admin dashboard</span><span class="row-sub">Accounts across every role, override tools and the permanent override log.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-health.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System health</span><span class="row-sub">Plain, data-dense technical view: active users, login patterns, overrides, cross-role activity.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Madrasa</h2><span class="pill pill-mute">5</span></div>
-      <div class="card flush">
-        <a class="row" href="madrasa-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Madrasa Admin dashboard</span><span class="row-sub">Student registry, check-in/out, two-source enrolment queue, staff and guardian accounts, schedule, notices.</span></span><span class="chev">›</span></a><a class="row" href="madrasa-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Madrasa analytics</span><span class="row-sub">Enrolment, resident vs. external mix, attendance, absences, staff activity, turnaround, class sizes, pickup heatmap.</span></span><span class="chev">›</span></a><a class="row" href="teacher-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Teacher dashboard</span><span class="row-sub">One assigned class only — roster, check-in/out and progress notes.</span></span><span class="chev">›</span></a><a class="row" href="minder-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Minder dashboard</span><span class="row-sub">All classes — roster, check-in/out and pickups, no progress notes.</span></span><span class="chev">›</span></a><a class="row" href="guardian-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">External Guardian dashboard</span><span class="row-sub">Madrasa-only view: children's records, add a child, term-length access pass, notifications.</span></span><span class="chev">›</span></a>
+    <div class="seg" data-group="range" role="group" aria-label="Time range">
+    <button type="button" aria-pressed="false">Today</button><button type="button" aria-pressed="false">Week</button><button type="button" aria-pressed="true">Month</button><button type="button" aria-pressed="false">Quarter</button><button type="button" aria-pressed="false">Year</button><button type="button" aria-pressed="false">Custom</button>
+  </div>
+    <div class="chips" style="margin-top:10px" data-group="madclassfilter">
+      <button type="button" class="chip" aria-pressed="true">All classes</button>
+      <button type="button" class="chip">Level 1</button>
+      <button type="button" class="chip">Level 2</button>
+      <button type="button" class="chip">Level 3</button>
+      <button type="button" class="chip">Level 4</button>
+    </div>
+
+    <div class="grid-2" style="margin-top:14px">
+      <div class="kpi">
+    <div class="k-label">Students enrolled</div>
+    <div class="k-value">84</div>
+    <div class="k-delta k-up">▲ 6 this term</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Overall attendance</div>
+    <div class="k-value">88<span>%</span></div>
+    <div class="k-delta k-up">▲ 1 pt vs. Aug</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Enrolment turnaround</div>
+    <div class="k-value">2.4<span>days</span></div>
+    <div class="k-delta k-up">▲ 0.6 days faster</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Pending enrolments</div>
+    <div class="k-value">5</div>
+    <div class="k-delta k-flat">■ 2 resident, 3 external</div>
+  </div>
+    </div>
+
+    <div class="section">
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Enrolment trend</h3>
+      
+    </div>
+    <div data-chart="line" data-cfg='{"labels":["Apr","May","Jun","Jul","Aug","Sep"],"series":[{"name":"Students","color":"#3FAE7A","values":[68,71,74,76,78,84]}]}'></div>
+    <p class="chart-note">Total students on the registry at month end.</p>
+  </div>
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Resident vs. External Guardian mix</h3>
+      
+    </div>
+    <div data-chart="donut" data-cfg='{"centerValue":"84","centerLabel":"students","items":[{"label":"Resident-linked","value":61,"color":"#3FAE7A"},{"label":"External Guardian","value":23,"color":"#123528"}]}'></div>
+    <p class="chart-note">Who each student is linked to.</p>
+  </div>
+    </div>
+
+    <div class="section">
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Attendance rate by class</h3>
+      
+    </div>
+    <div data-chart="bar" data-cfg='{"labels":["Level 1","Level 2","Level 3","Level 4"],"values":[91,89,86,84]}'></div>
+    <p class="chart-note">Percentage present, this month.</p>
+  </div>
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Overall attendance trend</h3>
+      
+    </div>
+    <div data-chart="line" data-cfg='{"labels":["Apr","May","Jun","Jul","Aug","Sep"],"series":[{"name":"Present %","color":"#3FAE7A","values":[85,86,84,87,87,88]}]}'></div>
+    <p class="chart-note">Percentage present across all classes, month by month.</p>
+  </div>
+    </div>
+
+    <div class="section">
+      <div class="card chart-card">
+        <div class="chart-head"><h3 style="font-size:15px">Absence patterns</h3><span class="tiny muted">this month</span></div>
+        <div class="table-scroll">
+          <table class="table">
+            <thead><tr><th>Student</th><th>Class</th><th>Linked to</th><th>Sessions</th><th>Absent</th></tr></thead>
+            <tbody>
+              <tr><td class="t-strong">Kabir Adisa</td><td>Level 4</td><td>House 91 · C</td><td>18</td><td>6</td></tr>
+              <tr><td class="t-strong">Halima Obi</td><td>Level 2</td><td>House 8 · A</td><td>18</td><td>5</td></tr>
+              <tr><td class="t-strong">Sadiq Adeyemi</td><td>Level 1</td><td>House 107 · Guardian</td><td>18</td><td>4</td></tr>
+              <tr><td class="t-strong">Amina Balogun</td><td>Level 3</td><td>House 104 · Guardian</td><td>18</td><td>3</td></tr>
+              <tr><td class="t-strong">Ibrahim Yusuf</td><td>Level 1</td><td>House 42 · B</td><td>18</td><td>2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="chart-note">Highest-absence students first. Each absence marked fires a notification to the linked parent or guardian.</p>
       </div>
     </div>
-    <div class="note" style="margin-bottom:30px">Design system: mint <b>#3FAE7A</b> / deep <b>#123528</b> with a lemon-gold <b>#E8C547</b> accent, Bricolage Grotesque for display and Plus Jakarta Sans for body. Reused patterns: hero-then-rounded-sheet, .card / .row / .pill / .tile, bottom-sheet modals, the on-screen PIN keypad, and the KPI / line / bar / donut / heatmap / table chart vocabulary.</div>
+
+    <div class="section">
+      <div class="card chart-card">
+        <div class="chart-head"><h3 style="font-size:15px">Teacher / Minder activity</h3><span class="tiny muted">check-ins performed</span></div>
+        <div class="table-scroll">
+          <table class="table">
+            <thead><tr><th>Staff</th><th>Role</th><th>Scope</th><th>Check-ins</th><th>Absences marked</th><th>Pickups</th></tr></thead>
+            <tbody>
+              <tr><td class="t-strong">Zainab Idris</td><td>Teacher</td><td>Level 2</td><td>96</td><td>11</td><td>0</td></tr>
+              <tr><td class="t-strong">Abdullahi Yakubu</td><td>Teacher</td><td>Level 1</td><td>88</td><td>9</td><td>0</td></tr>
+              <tr><td class="t-strong">Rukayat Sanni</td><td>Teacher</td><td>Level 3</td><td>74</td><td>14</td><td>0</td></tr>
+              <tr><td class="t-strong">Tijani Umar</td><td>Teacher</td><td>Level 4</td><td>69</td><td>17</td><td>0</td></tr>
+              <tr><td class="t-strong">Musa Garba</td><td>Minder</td><td>All classes</td><td>112</td><td>8</td><td>141</td></tr>
+              <tr><td class="t-strong">Hafsat Bello</td><td>Minder</td><td>All classes</td><td>97</td><td>6</td><td>128</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Pending-enrolment turnaround</h3>
+      
+    </div>
+    <div data-chart="line" data-cfg='{"labels":["Apr","May","Jun","Jul","Aug","Sep"],"series":[{"name":"Days","color":"#E8C547","values":[4.2,3.8,3.5,3.1,3,2.4]}]}'></div>
+    <p class="chart-note">Average days from application to approval, both sources combined.</p>
+  </div>
+      <div class="card chart-card">
+    <div class="chart-head">
+      <h3 style="font-size:15px">Class size distribution</h3>
+      
+    </div>
+    <div data-chart="bar" data-cfg='{"labels":["Level 1","Level 2","Level 3","Level 4"],"values":[22,24,21,17],"colors":["#3FAE7A","#123528","#3FAE7A","#123528"]}'></div>
+    <p class="chart-note">Students per class, current term.</p>
+  </div>
+    </div>
+
+    <div class="section">
+      <div class="card chart-card">
+        <div class="chart-head"><h3 style="font-size:15px">Pickup time patterns</h3><span class="tiny muted">day × hour</span></div>
+        <div data-chart="heat" data-cfg='{"rows":["Mon","Tue","Wed","Thu","Sat"],"cols":["12","13","17","18","19","20"],"values":[[0,0,8,11,9,3],[0,0,7,12,9,2],[0,0,8,11,10,3],[0,0,7,12,8,2],[9,11,1,0,0,0]]}'></div>
+        <p class="chart-note">Weekday pickups cluster at the 18:00 class change. Saturday sessions end at midday.</p>
+      </div>
+    </div>
+
+    <button class="btn btn-quiet btn-block" style="margin-top:20px">Export report (PDF / CSV)</button>
+    <div class="spacer-nav"></div>
   </main>
+  <nav class="bottomnav" aria-label="Primary">
+    <a class="navitem" href="madrasa-dashboard.html">
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span>Home</a>
+    <a class="navitem" href="madrasa-analytics.html" aria-current="page">
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Insights</a>
+    <a class="navitem" href="notifications.html">
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>Alerts</a>
+  </nav>
 </div>
 <script>
 /* ==========================================================================

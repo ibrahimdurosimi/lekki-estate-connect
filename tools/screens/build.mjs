@@ -9,6 +9,9 @@ import * as S2 from "./screens-2.mjs";
 import * as S3 from "./screens-3.mjs";
 import * as S4 from "./screens-4.mjs";
 import * as S5 from "./screens-5.mjs";
+import * as S6 from "./screens-6.mjs";
+import * as S7 from "./screens-7.mjs";
+
 
 const here = dirname(fileURLToPath(import.meta.url));
 const OUT = join(here, "../../public/screens");
@@ -24,6 +27,8 @@ const SCREENS = [
   { group: "Estate operations", items: [S3.emDashboard, S3.estateStaff, S3.emAnalytics] },
   { group: "Security", items: [S4.smDashboard, S4.smAnalytics, S4.guardKiosk, S4.guardSos] },
   { group: "Governance & system", items: [S5.execDashboard, S5.execAnalytics, S5.sysadminDashboard, S5.sysadminHealth] },
+  { group: "Madrasa", items: [S6.madrasaDashboard, S6.madrasaAnalytics, S7.teacherDashboard, S7.minderDashboard, S7.guardianDashboard] },
+
 ];
 
 const BLURB = {
@@ -54,6 +59,11 @@ const BLURB = {
   "exec-dashboard.html": "Estate Manager view plus EM account control, System Admin visibility and override log.",
   "exec-analytics.html": "Estate-health KPIs, manager accountability, year-over-year finance, plus all role analytics.",
   "sysadmin-dashboard.html": "Accounts across every role, override tools and the permanent override log.",
+  "madrasa-dashboard.html": "Student registry, check-in/out, two-source enrolment queue, staff and guardian accounts, schedule, notices.",
+  "madrasa-analytics.html": "Enrolment, resident vs. external mix, attendance, absences, staff activity, turnaround, class sizes, pickup heatmap.",
+  "teacher-dashboard.html": "One assigned class only — roster, check-in/out and progress notes.",
+  "minder-dashboard.html": "All classes — roster, check-in/out and pickups, no progress notes.",
+  "guardian-dashboard.html": "Madrasa-only view: children's records, add a child, term-length access pass, notifications.",
   "sysadmin-health.html": "Plain, data-dense technical view: active users, login patterns, overrides, cross-role activity.",
 };
 
@@ -79,7 +89,7 @@ const gallery = page(
       <div class="grow"><div style="font-weight:700;font-size:14.5px;color:#fff">Lighthouse Lekki Estate</div><div class="tiny muted">Community Portal — screen index</div></div>
     </div>
     <div style="margin-top:24px">
-      <span class="pill pill-gold">Batch 2 of 3 · resident, operations, security &amp; governance</span>
+      <span class="pill pill-gold">Complete · resident, operations, security, governance &amp; Madrasa</span>
       <h1 style="margin-top:12px">${count} static screens</h1>
       <p class="muted" style="margin-top:10px;font-size:13.5px">Self-contained HTML with embedded CSS and vanilla JS. No framework, no routing, no backend calls — a visual and interaction reference.</p>
     </div>
