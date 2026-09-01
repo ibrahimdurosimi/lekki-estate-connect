@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Screen index · Lighthouse Lekki Estate</title>
-<meta name="description" content="Index of the Lighthouse Lekki Estate Community Portal static screens.">
+<title>Teacher dashboard · Lighthouse Lekki Estate</title>
+<meta name="description" content="Scoped to one assigned class: roster, check-in/out and academic progress notes per student.">
 <meta name="theme-color" content="#123528">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -630,66 +630,139 @@ small{font-size:12px}
 <body>
 <div class="app">
 
-  <header class="hero">
+  <header class="hero hero-sm">
     <div class="topbar">
       <div class="avatar" style="background:var(--gold);color:var(--deep)">LH</div>
-      <div class="grow"><div style="font-weight:700;font-size:14.5px;color:#fff">Lighthouse Lekki Estate</div><div class="tiny muted">Community Portal — screen index</div></div>
+      <div class="grow"></div>
+      
+      <a class="iconbtn" href="notifications.html" aria-label="Notifications, 3 unread">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="badge-dot">3</span>
+      </a>
     </div>
-    <div style="margin-top:24px">
-      <span class="pill pill-gold">Complete · resident, operations, security, governance &amp; Madrasa</span>
-      <h1 style="margin-top:12px">33 static screens</h1>
-      <p class="muted" style="margin-top:10px;font-size:13.5px">Self-contained HTML with embedded CSS and vanilla JS. No framework, no routing, no backend calls — a visual and interaction reference.</p>
+    <div style="margin-top:16px">
+      <span class="role-tag">Madrasa Teacher</span>
+      <h1 style="font-size:25px;margin-top:10px">Level 2</h1>
+      <p class="muted" style="margin-top:6px;font-size:13.5px">Zainab Idris · Mon–Thu 16:00 – 17:30 · 24 students</p>
     </div>
   </header>
   <main class="sheet-body">
-    <div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Public</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="welcome.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Welcome</span><span class="row-sub">Resident-only landing with the daily rotating hadith.</span></span><span class="chev">›</span></a><a class="row" href="login-resident.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident sign in</span><span class="row-sub">House + unit + 6-character PIN on the custom keypad.</span></span><span class="chev">›</span></a><a class="row" href="login-admin.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Staff sign in</span><span class="row-sub">Email, password and MFA for estate and Madrasa staff.</span></span><span class="chev">›</span></a><a class="row" href="register.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident registration</span><span class="row-sub">Household registration ending in a pending-review confirmation.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Resident dashboards</h2><span class="pill pill-mute">2</span></div>
-      <div class="card flush">
-        <a class="row" href="dashboard-primary.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Resident dashboard</span><span class="row-sub">Full household view: passes, gate feed, dues, staff, Madrasa, SOS.</span></span><span class="chev">›</span></a><a class="row" href="dashboard-sub.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Sub-account dashboard</span><span class="row-sub">Reduced sub-account shell — only passes they issued.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Household management</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="sub-accounts.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Sub-accounts</span><span class="row-sub">List, add (PIN shown once) and deactivate sub-accounts.</span></span><span class="chev">›</span></a><a class="row" href="staff-onboarding.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Household staff onboarding</span><span class="row-sub">Invite code → live-in/visiting → KYC → gate PIN.</span></span><span class="chev">›</span></a><a class="row" href="staff-management.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Household staff</span><span class="row-sub">Primary's view of household staff and invite codes.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Estate services</h2><span class="pill pill-mute">5</span></div>
-      <div class="card flush">
-        <a class="row" href="facilities.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Facility booking</span><span class="row-sub">Facility carousel, date and slot picker, my bookings.</span></span><span class="chev">›</span></a><a class="row" href="tickets.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Fix-it tickets</span><span class="row-sub">Category tiles, urgency form and 4-stage status stepper.</span></span><span class="chev">›</span></a><a class="row" href="notices.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Notice board</span><span class="row-sub">Notice board filtered by Emergency / Info / Maintenance.</span></span><span class="chev">›</span></a><a class="row" href="polls.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Townhall polls</span><span class="row-sub">Townhall polls with animated result bars and closed history.</span></span><span class="chev">›</span></a><a class="row" href="marketplace.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Marketplace</span><span class="row-sub">Category grid, free vs. paid, message-seller sheet.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Account & insights</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="settings.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Settings & profile</span><span class="row-sub">Profile, next-of-kin, PIN change and notification preferences.</span></span><span class="chev">›</span></a><a class="row" href="analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">My insights</span><span class="row-sub">Household analytics using the shared chart vocabulary.</span></span><span class="chev">›</span></a><a class="row" href="notifications.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Notifications</span><span class="row-sub">Persistent notification history, filterable.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Estate operations</h2><span class="pill pill-mute">3</span></div>
-      <div class="card flush">
-        <a class="row" href="em-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Manager dashboard</span><span class="row-sub">Approvals with full next-of-kin, dues, audit log, accounts, notices, bookings, tickets.</span></span><span class="chev">›</span></a><a class="row" href="estate-staff.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate Staff records</span><span class="row-sub">Estate Staff records and recurring gate passes — this role never logs in.</span></span><span class="chev">›</span></a><a class="row" href="em-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate analytics</span><span class="row-sub">Estate-wide analytics: traffic, passes, dues, approvals, growth, overstays, tickets, facilities.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Security</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="sm-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security Manager dashboard</span><span class="row-sub">Guard roster, cross-gate live feed, full escalations, guard accounts, personal SOS.</span></span><span class="chev">›</span></a><a class="row" href="sm-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Security analytics</span><span class="row-sub">ACCESS/DENIED/EXPIRED health indicator, gate traffic, peak hours, response times, scans.</span></span><span class="chev">›</span></a><a class="row" href="guard-kiosk.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard kiosk</span><span class="row-sub">PIN-only kiosk with full-screen verdicts and operational guidance.</span></span><span class="chev">›</span></a><a class="row" href="guard-sos.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Guard SOS panel</span><span class="row-sub">Active alert banner, acknowledge action and the full day's alert log.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Governance & system</h2><span class="pill pill-mute">4</span></div>
-      <div class="card flush">
-        <a class="row" href="exec-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">President / VP dashboard</span><span class="row-sub">Estate Manager view plus EM account control, System Admin visibility and override log.</span></span><span class="chev">›</span></a><a class="row" href="exec-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Estate health — President / VP</span><span class="row-sub">Estate-health KPIs, manager accountability, year-over-year finance, plus all role analytics.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System Admin dashboard</span><span class="row-sub">Accounts across every role, override tools and the permanent override log.</span></span><span class="chev">›</span></a><a class="row" href="sysadmin-health.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">System health</span><span class="row-sub">Plain, data-dense technical view: active users, login patterns, overrides, cross-role activity.</span></span><span class="chev">›</span></a>
-      </div>
-    </div><div class="section" style="margin-top:0;margin-bottom:24px">
-      <div class="section-head"><h2>Madrasa</h2><span class="pill pill-mute">5</span></div>
-      <div class="card flush">
-        <a class="row" href="madrasa-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Madrasa Admin dashboard</span><span class="row-sub">Student registry, check-in/out, two-source enrolment queue, staff and guardian accounts, schedule, notices.</span></span><span class="chev">›</span></a><a class="row" href="madrasa-analytics.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Madrasa analytics</span><span class="row-sub">Enrolment, resident vs. external mix, attendance, absences, staff activity, turnaround, class sizes, pickup heatmap.</span></span><span class="chev">›</span></a><a class="row" href="teacher-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Teacher dashboard</span><span class="row-sub">One assigned class only — roster, check-in/out and progress notes.</span></span><span class="chev">›</span></a><a class="row" href="minder-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">Minder dashboard</span><span class="row-sub">All classes — roster, check-in/out and pickups, no progress notes.</span></span><span class="chev">›</span></a><a class="row" href="guardian-dashboard.html"><span class="row-icon">›</span><span class="grow"><span class="row-title">External Guardian dashboard</span><span class="row-sub">Madrasa-only view: children's records, add a child, term-length access pass, notifications.</span></span><span class="chev">›</span></a>
-      </div>
+    <div class="note">You are scoped to Level 2 only. Other classes, their rosters and their records are not part of this view.</div>
+
+    <div class="grid-2" style="margin-top:14px">
+      <div class="kpi">
+    <div class="k-label">Checked in</div>
+    <div class="k-value">21<span>/ 24</span></div>
+    <div class="k-delta k-flat">■ today's session</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Absent</div>
+    <div class="k-value">2</div>
+    <div class="k-delta k-flat">■ marked by you</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Not arrived</div>
+    <div class="k-value">1</div>
+    <div class="k-delta k-flat">■ session started 16:00</div>
+  </div>
+      <div class="kpi">
+    <div class="k-label">Progress notes</div>
+    <div class="k-value">18</div>
+    <div class="k-delta k-up">▲ this term</div>
+  </div>
     </div>
-    <div class="note" style="margin-bottom:30px">Design system: mint <b>#3FAE7A</b> / deep <b>#123528</b> with a lemon-gold <b>#E8C547</b> accent, Bricolage Grotesque for display and Plus Jakarta Sans for body. Reused patterns: hero-then-rounded-sheet, .card / .row / .pill / .tile, bottom-sheet modals, the on-screen PIN keypad, and the KPI / line / bar / donut / heatmap / table chart vocabulary.</div>
+
+    <div class="section">
+      <div class="section-head"><h2>Today's roster</h2><span class="pill pill-mute">Level 2</span></div>
+      <div class="chips" data-group="tfilter" data-filter-group="tfilter">
+        <button type="button" class="chip" data-value="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-value="in">Checked in</button>
+        <button type="button" class="chip" data-value="absent">Absent</button>
+        <button type="button" class="chip" data-value="expected">Not arrived</button>
+      </div>
+      <div class="card flush" style="margin-top:12px" data-filter-scope="tfilter">
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="in,all"><span class="row-icon">MY</span><span class="grow"><span class="row-title">Maryam Yusuf</span><span class="row-sub">House 42 · Unit B · in 15:38</span></span><span class="pill pill-ok">In</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="in,all"><span class="row-icon">FO</span><span class="grow"><span class="row-title">Fatima Ogunleye</span><span class="row-sub">House 63 · Unit B · in 15:41</span></span><span class="pill pill-ok">In</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="absent,all"><span class="row-icon">HO</span><span class="grow"><span class="row-title">Halima Obi</span><span class="row-sub">House 8 · Unit A · marked absent 15:45</span></span><span class="pill pill-warn">Absent</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="in,all"><span class="row-icon">AD</span><span class="grow"><span class="row-title">Aisha Danladi</span><span class="row-sub">House 17 · Unit A · in 15:52</span></span><span class="pill pill-ok">In</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="in,all"><span class="row-icon">YB</span><span class="grow"><span class="row-title">Yusuf Balogun</span><span class="row-sub">House 104 · External Guardian · in 15:55</span></span><span class="pill pill-ok">In</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="expected,all"><span class="row-icon">NE</span><span class="grow"><span class="row-title">Ngozi Eze</span><span class="row-sub">House 27 · Unit A · not arrived</span></span><span class="pill pill-mute">Expected</span></button>
+        <button class="row" data-open-sheet="sheet-student-t" data-tags="absent,all"><span class="row-icon">SM</span><span class="grow"><span class="row-title">Sadiq Musa</span><span class="row-sub">House 12 · Unit A · marked absent 15:44</span></span><span class="pill pill-warn">Absent</span></button>
+      </div>
+      <div class="pair" style="margin-top:12px">
+        <button class="btn btn-ghost" data-open-sheet="sheet-checkin-t">Mark absent</button>
+        <button class="btn" data-open-sheet="sheet-checkin-t">Check in / out</button>
+      </div>
+      <p class="tiny muted" style="margin-top:10px">Checking a student in, marking them absent or checking them out sends push and email to the linked resident or External Guardian directly from you.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>Progress notes</h2><button class="btn btn-sm" data-open-sheet="sheet-note-t">Add note</button></div>
+      <div class="card">
+        <div class="card-head"><div class="grow"><h3>Maryam Yusuf</h3><p class="tiny muted" style="margin-top:3px">Level 2 · last note 29 Aug</p></div><span class="pill pill-ok">On track</span></div>
+        <p class="tiny" style="margin-top:10px">Memorisation steady, reading fluency improving. Continue current pace this term.</p>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="card-head"><div class="grow"><h3>Sadiq Musa</h3><p class="tiny muted" style="margin-top:3px">Level 2 · last note 27 Aug</p></div><span class="pill pill-warn">Needs support</span></div>
+        <p class="tiny" style="margin-top:10px">Attendance affecting progress. Follow up with the household at the next session.</p>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="card-head"><div class="grow"><h3>Yusuf Balogun</h3><p class="tiny muted" style="margin-top:3px">Level 2 · last note 26 Aug</p></div><span class="pill pill-ok">On track</span></div>
+        <p class="tiny" style="margin-top:10px">Settled well since joining in May. Confident in recitation.</p>
+      </div>
+      <p class="tiny muted" style="margin-top:10px">Progress notes belong to the Teacher role only — Minders do not record them.</p>
+    </div>
+    <div class="spacer-nav"></div>
   </main>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet-checkin-t" role="dialog" aria-modal="true" aria-label="Check in / out">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head">
+      <div class="grow"><h2 style="font-size:19px">Check in / out</h2><p class="tiny muted" style="margin-top:3px">Level 2 · today's session</p></div>
+      <button class="iconbtn on-light" data-close-sheet aria-label="Close">✕</button>
+    </div>
+    <div class="sheet-scroll"><label class="field"><span class="label">Student</span><select class="select"><option>Maryam Yusuf</option><option>Fatima Ogunleye</option><option>Halima Obi</option><option>Aisha Danladi</option><option>Yusuf Balogun</option><option>Ngozi Eze</option><option>Sadiq Musa</option></select></label>
+    <label class="field"><span class="label">Action</span><select class="select"><option>Check in</option><option>Mark absent</option><option>Check out / picked up</option></select></label>
+    <label class="field"><span class="label">Collected by (check-out only)</span><input class="input" placeholder="Name of the person collecting"></label>
+    <div class="note">The linked parent or guardian is notified as soon as this is saved — push and email together.</div></div>
+    <div class="sheet-foot"><button class="btn btn-ghost" data-close-sheet>Cancel</button><button class="btn" data-close-sheet>Save</button></div>
+  </div>
+  <div class="sheet" id="sheet-note-t" role="dialog" aria-modal="true" aria-label="Progress note">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head">
+      <div class="grow"><h2 style="font-size:19px">Progress note</h2><p class="tiny muted" style="margin-top:3px">Level 2 only</p></div>
+      <button class="iconbtn on-light" data-close-sheet aria-label="Close">✕</button>
+    </div>
+    <div class="sheet-scroll"><label class="field"><span class="label">Student</span><select class="select"><option>Maryam Yusuf</option><option>Fatima Ogunleye</option><option>Halima Obi</option><option>Aisha Danladi</option><option>Yusuf Balogun</option><option>Ngozi Eze</option><option>Sadiq Musa</option></select></label>
+    <label class="field"><span class="label">Status</span><select class="select"><option>On track</option><option>Needs support</option></select></label>
+    <label class="field"><span class="label">Note</span><textarea class="textarea" rows="3" placeholder="Short factual observation"></textarea></label></div>
+    <div class="sheet-foot"><button class="btn btn-ghost" data-close-sheet>Cancel</button><button class="btn" data-close-sheet>Save note</button></div>
+  </div>
+  <div class="sheet" id="sheet-student-t" role="dialog" aria-modal="true" aria-label="Maryam Yusuf">
+    <div class="sheet-grab"></div>
+    <div class="sheet-head">
+      <div class="grow"><h2 style="font-size:19px">Maryam Yusuf</h2><p class="tiny muted" style="margin-top:3px">Level 2 · House 42 · Unit B</p></div>
+      <button class="iconbtn on-light" data-close-sheet aria-label="Close">✕</button>
+    </div>
+    <div class="sheet-scroll"><table class="table">
+      <tbody>
+        <tr><td class="t-strong">Class / level</td><td>Level 2</td></tr>
+        <tr><td class="t-strong">Linked to</td><td>House 42 · Unit B — Ahmed Yusuf</td></tr>
+        <tr><td class="t-strong">Next of kin</td><td>Ahmed Yusuf (Father) · 0803 000 0142</td></tr>
+        <tr><td class="t-strong">Emergency contact</td><td>Fatima Yusuf (Mother) · 0803 000 0143</td></tr>
+        <tr><td class="t-strong">Today</td><td><span class="pill pill-ok">Checked in 15:38</span></td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:12px">Record edits beyond check-in, absence and progress notes are made by the Madrasa Admin.</div></div>
+    <div class="sheet-foot"><button class="btn btn-ghost" data-close-sheet>Close</button><button class="btn" data-close-sheet>Add progress note</button></div>
+  </div>
+  <nav class="bottomnav" aria-label="Primary">
+    <a class="navitem" href="teacher-dashboard.html" aria-current="page">
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5"/><path d="M17 8.5a3 3 0 0 1 0 5"/></svg></span>Class</a>
+    <a class="navitem" href="notifications.html">
+      <span class="nav-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>Alerts</a>
+  </nav>
 </div>
 <script>
 /* ==========================================================================
