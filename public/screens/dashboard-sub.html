@@ -1160,11 +1160,13 @@ small{font-size:12px}
         strength: el.hasAttribute('data-strength'),
         mask: el.hasAttribute('data-mask'),
         onComplete: function () {
-          var cta = document.querySelector(el.getAttribute('data-cta') || '');
+          var sel = el.getAttribute('data-cta');
+          var cta = sel ? document.querySelector(sel) : null;
           if (cta) cta.removeAttribute('disabled');
         },
         onChange: function (v) {
-          var cta = document.querySelector(el.getAttribute('data-cta') || '');
+          var sel = el.getAttribute('data-cta');
+          var cta = sel ? document.querySelector(sel) : null;
           if (cta && v.length < parseInt(el.getAttribute('data-length') || '6', 10)) cta.setAttribute('disabled', '');
         }
       });
