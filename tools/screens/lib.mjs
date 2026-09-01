@@ -223,6 +223,25 @@ export const NAV_GUARD = [
   ["Kiosk", "guard-kiosk.html", "key"],
   ["SOS panel", "guard-sos.html", "shield"],
 ];
+export const NAV_MAD = [
+  ["Home", "madrasa-dashboard.html", "home"],
+  ["Insights", "madrasa-analytics.html", "chart"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_TEACH = [
+  ["Class", "teacher-dashboard.html", "people"],
+  ["Alerts", "notifications.html", "bell"],
+];
+export const NAV_MINDER = [
+  ["Roster", "minder-dashboard.html", "people"],
+  ["Alerts", "notifications.html", "bell"],
+];
+/* External Guardian: Madrasa surfaces only — nothing else is linked or shown. */
+export const NAV_GUARDIAN = [
+  ["Home", "guardian-dashboard.html", "home"],
+  ["Alerts", "guardian-dashboard.html#g-notifications", "bell"],
+];
+
 
 /* Feed item used by cross-gate live activity. */
 export function feedItem({ gate = "1", title, sub, time, pill = "" }) {
